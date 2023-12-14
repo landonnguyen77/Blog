@@ -1,7 +1,8 @@
 
 ---
 import '/src/styles/global.css';
-
+import Header from '/Users/landon/celestial-crater/tutorial/src/components/Header.astro';
+import Footer from '/Users/landon/celestial-crater/tutorial/src/components/footer.astro';
 const pageTitle = "About Me";
 const identity = {
 	firstName : "Landon",
@@ -25,7 +26,7 @@ const textCase = "uppercase";
 		<title>{pageTitle}</title>
 		<style define:vars={{skillColor, fontWeight, textCase}}>
 			h1 {
-			  color: purple;
+			  color: rgb(0, 128, 83);
 			  font-size: 4rem;
 			}
 			.skill {
@@ -36,10 +37,7 @@ const textCase = "uppercase";
 		  </style>
 	<body>
 		<body>
-			<a href="/">Home</a>
-			<a href="/about/">About</a>
-			<a href="/blog/">Blog</a>
-
+			<Header />
 			<h1>{pageTitle}</h1>
 			<h2>... and my new Astro site!</h2>
 		  
@@ -58,6 +56,10 @@ const textCase = "uppercase";
 				<ul>
 				{skills.map((skill) => <li class="skill">{skill}</li>)}
 				</ul>
+				<Footer />
+				<script>
+					import '/Users/landon/celestial-crater/tutorial/src/scripts/menu.js';
+				</script>
 		  </body>
 	</body>
 </html>

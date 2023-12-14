@@ -1,5 +1,7 @@
 ---
+import Header from '/Users/landon/celestial-crater/tutorial/src/components/Header.astro';
 import '/src/styles/global.css';
+import Footer from '/Users/landon/celestial-crater/tutorial/src/components/footer.astro';
 const pageTitle = "My Music Blog";
 ---
 <html lang="en">
@@ -11,9 +13,7 @@ const pageTitle = "My Music Blog";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+        <Header />
 
 
 		<h1>Musical Discoveries</h1>
@@ -23,5 +23,9 @@ const pageTitle = "My Music Blog";
             <li><a href="/posts/post-2">Post 2</a></li>
             <li><a href="/posts/post-3">Post 3</a></li>
         </ul>
+        <Footer />
+        <script>
+            import '/Users/landon/celestial-crater/tutorial/src/scripts/menu.js';
+        </script>
 	</body>
 </html>
